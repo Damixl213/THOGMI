@@ -1,1 +1,59 @@
 
+
+*{
+  background: rgba(27, 24, 24, 0.999)linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+}
+header{
+  text-align: center;
+  
+}
+nav ul{
+  list-style: none;
+  
+}
+nav li{
+display:inline-block;
+direction: flex ;
+margin-right: 13px;
+font-size:14px ;
+font-family: "Poppins", sans-serif;;
+position: relative;
+}
+nav a{
+  text-decoration: none;
+  color:white;
+}
+nav ul li a:hover::before,nav ul li a:hover::after{
+width: 100%;
+left: 0;
+
+  
+}
+nav ul li a:active::after {
+width: 100%;
+left: 0;
+
+  
+}
+nav li a::before{
+ content:"";
+ position: absolute;
+ top: 0;
+ left:50%;
+ width:0%;
+ height: 2px;
+ background:#f7f7f7 ;
+ transition: all 250ms ease-in-out;
+
+}
+nav li a::after{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  width:0%;
+  height: 2px;
+  background:#f7f7f7 ;
+  transition: all 250ms ease-in-out;
+}
+
