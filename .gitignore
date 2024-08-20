@@ -1,0 +1,16 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore all .log files
+*.log
+
+# Ignore environment files
+.env
+prepros-6.config
+
+# Ignore README2 file
+README2.md
+
+#Ignore packages
+package-lock.json
+package.json
