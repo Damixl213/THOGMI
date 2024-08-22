@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
+    display: flex;
   }
 
   #password {
@@ -84,6 +86,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+
   h1 {
     text-align: center;
     font-size: 7em;
@@ -93,15 +96,13 @@ body {
                  0px 3px 0px  black, 
                  0px 8px 0px  black,  
                  0px 9px 0px  black,  
-                 0px 10px 0px black, 
+                 -10px 15px 10px black, 
 
                  0px 9px 5px black;
                  font-size: 80px;
-
-text-align: center;
--webkit-animation: glow 1s ease-in-out infinite alternate;
--moz-animation: glow 1s ease-in-out infinite alternate;
-animation: glow 1s ease-in-out infinite alternate;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
 }             
 
   input[type="text"],

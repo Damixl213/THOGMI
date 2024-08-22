@@ -153,3 +153,19 @@ form button:hover {
     font-size: 24px;
     font-weight: bold;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.parallax {
+    background-image: url('your-image.jpg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - The House of God Ministry</title>
+    <title>Events - The House of God Ministry</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,8 +14,8 @@
                 <li class="dropdown">
                     <a href="about.html"><i class="fas fa-handshake"></i>About Us</a>
                     <div class="dropdown-content">
-                        <a href="#history">Church History</a>
-                        <a href="#mission">Mission and Vision</a>
+                        <a href="about.html#history">Church History</a>
+                        <a href="about.html#mission">Mission and Vision</a>
                     </div>
                 </li>
                 <li><a href="services.html"><i class="fas fa-praying-hands"></i>Services</a></li>
@@ -27,40 +27,26 @@
     </header>
 
     <main>
-        <section class="history section" id="history">
+        <section class="upcoming-events section">
             <div class="container">
-                <h2 class="section-title">Church History</h2>
-                <p>Founded in [Year], our church has a rich history of serving the community and nurturing spiritual growth...</p>
-            </div>
-        </section>
-
-        <section class="mission section" id="mission">
-            <div class="container">
-                <h2 class="section-title">Mission and Vision</h2>
-                <p>Our mission is to spread the word of God and provide support to those in need...</p>
-            </div>
-        </section>
-
-        <section class="leadership section">
-            <div class="container">
-                <h2 class="section-title">Leadership Team</h2>
-                <div class="team-member">
-                    <img src="pastor.jpg" alt="Pastor">
-                    <h3>Pastor Nixon Oniwon</h3>
-                    <p>Lead Pastor</p>
+                <h2 class="section-title">Upcoming Events</h2>
+                <div class="event">
+                    <h3>Solution Night</h3>
+                    <p>Join us this Friday for our Solution Night vigil come and be blessed...</p>
+                    <button class="btn" onclick="showPopup()">Register</button>
                 </div>
-                <!-- Add more team members as needed -->
+                <!-- Add more events as needed -->
             </div>
         </section>
 
-        <section class="testimonials section">
+        <section class="past-events section">
             <div class="container">
-                <h2 class="section-title">Testimonials</h2>
-                <blockquote>
-                    <p>"The House of God Ministry has been a blessing to me and my family..."</p>
-                    <footer>- Oluwamayowa Samuel Kalejaiye</footer>
-                </blockquote>
-                <!-- Add more testimonials as needed -->
+                <h2 class="section-title">Past Events</h2>
+                <div class="event">
+                    <h3>Community Service Day</h3>
+                    <p>Thank you to everyone who participated in our Community Service Day...</p>
+                </div>
+                <!-- Add more past events as needed -->
             </div>
         </section>
     </main>
