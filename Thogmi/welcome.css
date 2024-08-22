@@ -1,0 +1,33 @@
+body {
+    background-color: #f4f4f4; /* Cozy background color */
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .button-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .login-button, .signup-button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .login-button {
+    background-color: black;
+    color: white;
+  }
+  .signup-button {
+    background-color: navy;
+    color: white;
+  }
+  .login-button:hover, .signup-button:hover {
+    filter: blur(2px);
+  }

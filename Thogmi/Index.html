@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The House of God Ministry</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1ea58d4938.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;700&display=swap">
+    <link rel="stylesheet" href="index.css">
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home"><i class="fas fa-house-user"></i>Home</a></li>
+                <li><a href="#about"><i class="fas fa-handshake"></i>About Us</a></li>
+                <li><a href="#services"><i class="fas fa-praying-hands"></i>Services</a></li>
+                <li><a href="#events"><i class="fas fa-calendar-day"></i>Events</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope-open-text"></i>Contact Us</a></li>
+                <li><a href="#donate"><i class="fas fa-donate"></i>Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <h1>THE HOUSE OF GOD MINISTRY</h1>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+                <p>Welcome to The House of God Ministry. We are dedicated to fostering a strong community of faith, love, and service. Our mission is to spread the word of God and provide support to those in need.</p>
+            </div>
+        </section>
+
+        <section class="history section" id="history">
+            <div class="container">
+                <h2 class="section-title">Church History</h2>
+                <p>Founded in [Year], our church has a rich history of serving the community and nurturing spiritual growth. Learn more about our journey and the milestones we've achieved over the years.</p>
+            </div>
+        </section>
+
+        <section class="services section" id="services">
+            <div class="container">
+                <h2 class="section-title">Services</h2>
+                <p>We offer a variety of services including worship, Bible studies, and community outreach programs. Join us for our weekly services and be part of our vibrant community.</p>
+            </div>
+        </section>
+
+        <section class="events section" id="events">
+            <div class="container">
+                <h2 class="section-title">Upcoming Events</h2>
+                <div class="countdown" id="countdown">
+                    <!-- Countdown timer will be inserted here -->
+                </div>
+                <button class="btn" onclick="showPopup()">View Event Details</button>
+            </div>
+        </section>
+
+        <section class="donate section" id="donate">
+            <div class="container">
+                <h2 class="section-title">Donate</h2>
+                <p>Your generous donations help us continue our mission and support our community programs. Click the button below to make a contribution.</p>
+                <a href="#" class="btn">Donate Now</a>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <form>
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer code here -->
+    </footer>
+
+    <!-- Popup for event details -->
+    <div class="popup" id="popup">
+        <h3>Solution Night</h3>
+        <p>Join us this Friday for our Solution Night vigil come and be blessed.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="index.js"></script>
+        
+</body>
+</html>

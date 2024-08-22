@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Manager</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="view.html">View Accounts</a></li>
+        <li><a href="main.html">Add password</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>Password Manager</h1>
+    <form id="password-form">
+      <input type="text" id="website" placeholder="Website" required>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <div class="button-container">
+        <button class="button add-button" type="submit">Add Password</button>
+        <button class="button view-button" type="button" onclick="viewPasswords()">View Passwords</button>
+        <button class="button delete-button" type="button" onclick="deleteAllPasswords()">Delete All</button>
+      </div>
+    </form>
+    <div id="pass-list"><h2>History</h2><br></div>
+    <div id="password-list"><hr><br></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* Global styles */
+@import 'animate.css';
+
+html {
+  font-size: 92.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+::selection {
+  color:  #3498db;
+  background-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px -10px;
+  }
+  
+  .but{
+    font-size: large;
+    color: #e74c3c;
+    height: 40px;
+    width: 120px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    border-color: #e74c3c;
+  }
+
+
+
+  .but:hover{
+    background-color:#e74c3c;
+    color: white;
+  }
+
+  header {
+    background-color: #333;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s;
+}
+nav a:hover {
+    color: #ddd;
+    transform: scale(1.1);
+}
+nav i {
+    margin-right: 8px;
+}
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  

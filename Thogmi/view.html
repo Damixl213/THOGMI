@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js">
+  <link rel="stylesheet" href="views.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Manager - Accounts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- <script>
+    function active() {
+      var animation = bodymovin.loadAnimation({
+      container: document.getElementById('icon-container'), // Required
+      path: 'data.json', // Path to your JSON file (required)
+      renderer: 'json', // Specify the format (required)
+      loop: true, // Optional: Set to true if you want the animation to loop
+      autoplay: true, // Optional: Set to true to play the animation immediately
+      name: "Demo Animation" // Optional: Provide a name for your animation
+    });
+  }
+  </script> -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="view.html">View Accounts</a></li>
+        <li><a href="main.html">Add password</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1>Password Manager</p></div></h1>
+  <div class="container">
+    <!-- Add Password Form -->
+    <form id="password-form">
+      <input type="text" id="website" placeholder="Website" required>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <div class="button-container">
+        <button class="button add-button animate__animated animate__jello" type="submit">Add Password</button>
+        <button class="button view-button animate__animated animate__jello" type="button" onclick="viewPasswords()">View Passwords</button>
+        <button class="button delete-button animate__animated animate__jello" type="button" onclick="deleteAllPasswords()">Delete All</button>
+      </div>
+    </form>
+    
+    <div id="password-list"><h2>Accounts</h2></div>
+  </div>
+
+  <script>
+   
+  </script>
+
+  <div class="container">
+  <div class="django-database-documentation">
+    <h2>History</h2>
+    
+    <h3>Search</h3>
+      <input type="text" id="myinput" placeholder="Search account" title="type in an account">
+    <table  id="myTable">
+      <tr>
+        <h3><th style="width:60%">Accounts</th></h3>
+        <h3><th style="width:40%">Actions</th></h3>
+      </tr>
+    </table>
+    
+  </div>
+  </div>
+</body>
+</html>
