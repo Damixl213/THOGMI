@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Password Manager</title>
+  <script href="https://kit.fontawesome.com/1ea58d4938.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="signup.css"/>
+  <script src="signup.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up for Your Account</h2>
+    <form autocomplete="off" spellcheck="false" id="signup_form" onload="Functionevent()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" onkeyup="name()" onfocus="this.value=''" value="Jack Reacher" required >
+        <span id="user"></span>
+      </div>
+      <div class="form-group">
+        <label for="useremail">Email:</label>
+        <input type="email" id="useremail" name="email" onfocus="this.value=''" value="JackReacher@mail.com" required>
+        <span id="email"></span>
+      </div>
+      <div class="form-group pass_">
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password" required/>
+        <i class="fa fa-user-shield mx-2 icon"></i>
+        <span id="strength"></span> 
+      </div>
+      <div class="form-group">
+        <label for="password2">Re-enter Password:</label>
+        <input type="password" id="pass2" name="password2" required >
+        <span id="pass2"></span>
+      </div> 
+      <button onclick="return generateUniquePassword()"  class="generate-button animate__animated animate__jello">Genarate Password</button>     
+      <a href="main.html"><button class="signup-button animate__animated animate__jello" type="button">Sign Up</button></a>
+    </form>
+  </div>
+</body>
+</html>
