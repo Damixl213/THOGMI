@@ -43,7 +43,7 @@ const photos: Photo[] = [
   },
   {
     id: '3',
-    src: 'https://images.unsplash.com/photo-1523803326055-13c741e26927?auto=format&fit=crop&q=80',
+    src: 'https://fastlagos.com/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-08-at-8.05.46-AM1.jpeg',
     category: 'Youth Activities',
     title: 'Youth Camp 2024',
     date: '2024-02-28',

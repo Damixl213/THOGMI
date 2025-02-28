@@ -10,7 +10,7 @@ interface SEOProps {
 export function SEO({ title, description, image, url }: SEOProps) {
   const siteTitle = 'The House of God Ministry';
   const fullTitle = `${title} | ${siteTitle}`;
-  const defaultImage = 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80';
+  const defaultImage = 'https://web.facebook.com/photo.php?fbid=1102532141563649&set=pb.100054206200432.-2207520000&type=3';
 
   return (
     <Helmet>

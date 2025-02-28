@@ -20,7 +20,7 @@ export function HomePage() {
         <section className="relative">
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1510144769421-4b0f8758f96c?auto=format&fit=crop&q=80"
+              src="https://scontent.flos2-1.fna.fbcdn.net/v/t39.30808-6/452916770_1007922071024657_5700112516703868349_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeF2ofpkzb2fsN88YjXjWhDSdg4TsI1vAF12DhOwjW8AXZpgnvUSgtSPj2gzoBk3GxhUA8zmtEqhzITFB2Sk7o6w&_nc_ohc=JLljLhs_DXoQ7kNvgHP5MMG&_nc_oc=AdjCe27UCiorAUrYM8yXj_GC9lGEbUy_0m40xP2pvLAs9g48DTdT3Cs2x8E5aO2ikxU&_nc_zt=23&_nc_ht=scontent.flos2-1.fna&_nc_gid=A7tvQLTPg3mavYXsl6EvVa7&oh=00_AYDrWja92PzKkjesXaHHqKGSdTtHbuOsDgrvtap1TnxzVA&oe=67C3DF37"
               alt="Church interior"
               className="h-full w-full object-cover"
             />
@@ -72,15 +72,30 @@ export function HomePage() {
               </h2>
               <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <div className="rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Sunday Service</h3>
+                  <img
+                    src="https://thogmi.org/media/c40729008dee3fa2619fd44dc49ee02e.jpg"
+                    alt="Sunday Service"
+                    className="h-80 w-full object-cover rounded-lg"
+                  />
+                  <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">SUNDAY SERVICE</h3>
                   <p className="mt-2 text-gray-600 dark:text-gray-300">10:00 AM - 12:00 PM</p>
                 </div>
                 <div className="rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Bible Study</h3>
+                  <img
+                    src="https://thogmi.org/media/1aad8ba60f929c7c60540567e93f88b5.jpg"
+                    alt="Bible Study"
+                    className="h-80 w-full object-fill rounded-lg"
+                  />
+                  <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">BREAKTHROUGH SERVICE</h3>
                   <p className="mt-2 text-gray-600 dark:text-gray-300">Wednesday 7:00 PM - 8:30 PM</p>
                 </div>
                 <div className="rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Prayer Meeting</h3>
+                  <img
+                    src="https://thogmi.org/media/cc2242b7b24f7a1afc44e6e5bc4ec9e5.jpg"
+                    alt="Prayer Meeting"
+                    className="h-80 w-full object-cover rounded-lg"
+                  />
+                  <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">BIBLE STUDY</h3>
                   <p className="mt-2 text-gray-600 dark:text-gray-300">Friday 6:30 PM - 8:00 PM</p>
                 </div>
               </div>

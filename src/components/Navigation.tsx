@@ -22,10 +22,10 @@ export function Navigation() {
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">The House of God Ministry</span>
-            <span className="text-2xl font-bold text-gray-900 dark:text-white">HGM</span>
+            <span className="text-2xl font-bold text-gray-900 dark:text-white">THOGMI</span>
           </Link>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden rounded-md p-2.5 text-gray-700 dark:text-gray-200">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-200"
@@ -40,7 +40,7 @@ export function Navigation() {
             <Link
               key={item.name}
               to={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-600 dark:text-white dark:hover:text-gray-300"
+              className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-100 dark:text-white dark:hover:text-gray-300"
             >
               {item.name}
             </Link>
@@ -50,17 +50,17 @@ export function Navigation() {
           <ThemeToggle />
         </div>
       </nav>
-      <div className={`lg:hidden ${mobileMenuOpen ? '' : 'hidden'}`}>
-        <div className="fixed inset-0 z-50" />
-        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
+      <div className={`lg:hidden fixed inset-0 z-50 transition-transform transform ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="fixed  bg-blackopacity-10" onClick={() => setMobileMenuOpen(false)} />
+        <div className="fixed right-0 z-50 w-full max-w-xs bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex items-center justify-between ">
             <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">The House of God Ministry</span>
-              <span className="text-2xl font-bold">HGM</span>
+              <span className="text-2xl font-bold">THOGMI</span>
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-200"
+              className="-m-2.5 bg-white rounded-md p-2.5 text-gray-700 dark:text-gray-200"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -68,8 +68,8 @@ export function Navigation() {
             </button>
           </div>
           <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
+            <div className="-my-6 divide-y divide-gray-500/10 bg-white">
+              <div className="space-y-2 py-6 bg-white">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
@@ -81,7 +81,7 @@ export function Navigation() {
                   </Link>
                 ))}
               </div>
-              <div className="py-6">
+              <div className="py-6 ">
                 <ThemeToggle />
               </div>
             </div>

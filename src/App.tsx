@@ -5,7 +5,9 @@ import { Navigation } from './components/Navigation';
 import { AboutPage } from './pages/AboutPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { HomePage } from './pages/HomePage';
-
+import Contact from './pages/Conatct';
+import Blog from './pages/Blog';
+import Gallery from './pages/Gallery';
 function App() {
   return (
     <HelmetProvider>
@@ -17,6 +19,9 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/marketplace" element={<Gallery />} />
+              <Route path='/Contact' element= {<Contact/>}/>
               {/* Other routes will be added as we implement them */}
             </Routes>
           </AnimatePresence>
