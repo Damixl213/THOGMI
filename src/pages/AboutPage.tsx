@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { Calendar, CheckCircle, Clock, FileText, Heart, Mail, Phone, User } from 'lucide-react';
 import { useState } from 'react';
 import { SEO } from '../components/SEO';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 interface TimelineEvent {
   year: string;
@@ -46,13 +48,13 @@ const timelineEvents: TimelineEvent[] = [
 
 const leadershipTeam: LeadershipMember[] = [
   {
-    name: 'Pastor John Smith',
+    name: 'Pastor Nixion',
     role: 'Senior Pastor',
     image: 'https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&q=80',
     bio: 'Pastor John has been leading our congregation for over 20 years with wisdom and compassion.',
   },
   {
-    name: 'Sarah Johnson',
+    name: 'Pastor Mrs  ',
     role: 'Worship Director',
     image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&q=80',
     bio: 'Sarah brings over 15 years of experience in worship ministry and music education.',
@@ -62,6 +64,18 @@ const leadershipTeam: LeadershipMember[] = [
     role: 'Youth Pastor',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80',
     bio: 'Michael leads our youth ministry with energy and dedication to spiritual growth.',
+  },
+  {
+    name: 'Rachel Thompson',
+    role: 'Children\'s Ministry Director',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80',
+    bio: 'Rachel has a passion for nurturing the spiritual development of our youngest members.',
+  },
+  {
+    name: 'Rachel Thompson',
+    role: 'Children\'s Ministry Director',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80',
+    bio: 'Rachel has a passion for nurturing the spiritual development of our youngest members.',
   },
   {
     name: 'Rachel Thompson',
@@ -133,15 +147,29 @@ export function AboutPage() {
               <div className="mt-8 grid gap-8 md:grid-cols-2">
                 <div className="rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
                   <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Mission</h2>
-                  <p className="mt-4 text-gray-600 dark:text-gray-300">
-                    To spread the love of Christ through worship, fellowship, and service to our community and beyond.
-                  </p>
+                  <ul className="mt-4 text-gray-600 dark:text-gray-300 font-semibold text-start space-y-5 italic">
+                    <li>- Encountering God's love and Power</li>
+                    <li>- Growing in faith and spiritual gifts</li>
+                    <li>- Connecting with The Holy Spirit through consistent fellowship with community of like-minded believers</li>
+                    <li>- Impacting the world through Prophetic Power of God's word leading to Salvation, Deliverance, Breakthrough, Healing and Restoration</li>
+                  </ul>
                 </div>
                 <div className="rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
                   <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Vision</h2>
-                  <p className="mt-4 text-gray-600 dark:text-gray-300">
-                    To be a beacon of hope and transformation, nurturing spiritual growth and fostering meaningful connections.
-                  </p>
+                  <p className="mt-4 text-gray-600 dark:text-gray-300 text-start">
+                  To be a beacon of hope and light in a world needing God's touch
+by raising  an influential godly impacted generation of Spirit
+filled believers. empowering individuals to reach their full
+potential in Christ.</p>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-6 dark:bg-gray-700 mx-9">
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Mission</h2>
+                  <ul className="mt-4 text-gray-600 dark:text-gray-300 font-semibold text-start space-y-5 italic">
+                    <li> Spiritual growth and development</li>
+                    <li>-Love and compassion</li>
+                    <li>- Integrity and accountability</li>
+                    <li>- Impacting the world through Prophetic Power of Community and fellowship</li>
+                  </ul>
                 </div>
               </div>
             </motion.div>
@@ -206,42 +234,54 @@ export function AboutPage() {
 
         {/* Leadership Team */}
         <section className="bg-white dark:bg-gray-800">
-          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+  <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.6 }}
+    >
+      <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
+        Our Leadership Team
+      </h2>
+      <div className="mt-12">
+        <Carousel
+          showThumbs={false}
+          showStatus={false}
+          infiniteLoop={false}
+          useKeyboardArrows
+          autoPlay={false}
+          centerMode
+          centerSlidePercentage={33.33}
+        >
+          {leadershipTeam.map((member) => (
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.6 }}
+              key={member.name}
+              initial={{ y: 20, opacity: 0  }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              className="p-4"
             >
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
-                Our Leadership Team
-              </h2>
-              <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                {leadershipTeam.map((member) => (
-                  <motion.div
-                    key={member.name}
-                    initial={{ y: 20, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once: true }}
-                    className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden"
-                  >
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-64 object-cover"
-                    />
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                        {member.name}
-                      </h3>
-                      <p className="mt-1 text-indigo-600 dark:text-indigo-400">{member.role}</p>
-                      <p className="mt-4 text-gray-600 dark:text-gray-300">{member.bio}</p>
-                    </div>
-                  </motion.div>
-                ))}
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    {member.name}
+                  </h3>
+                  <p className="mt-1 text-indigo-600 dark:text-indigo-400">{member.role}</p>
+                  <p className="mt-4 text-gray-600 dark:text-gray-300">{member.bio}</p>
+                </div>
               </div>
             </motion.div>
-          </div>
-        </section>
+          ))}
+        </Carousel>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
         {/* Join Workforce */}
         <section className="bg-gray-50 dark:bg-gray-900">

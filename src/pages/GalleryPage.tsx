@@ -120,7 +120,7 @@ export function GalleryPage() {
             transition={{ delay: 0.2 }}
           >
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
-              Photo Gallery
+              Brand and Marketing
             </h1>
             <p className="mt-4 text-center text-gray-600 dark:text-gray-300">
               Capturing moments of worship, community, and fellowship

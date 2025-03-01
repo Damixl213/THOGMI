@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Volume2, Download, X } from 'lucide-react';
+import { Play, Volume2, Download, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const pastors = [
   {
-    name: "Rev. John Smith",
+    name: "Pastor Nixion Oniwon",
     role: "Senior Pastor",
     image: "https://images.unsplash.com/photo-1542282088-fe8426682b8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    bio: "Leading our congregation for over 15 years with wisdom and grace."
+    bio: "Led by Pastor Nixon Oniwon, our team of dedicated pastors, ministers, and workforce are committed to serving God and our community with excellence and passion."
   },
   {
     name: "Rev. Sarah Johnson",
@@ -29,12 +29,6 @@ const sermons = [
     date: "2024-02-18",
     duration: "38:00",
     audioUrl: "https://www.example.com/audio/the-power-of-prayer.mp3" // Replace with a valid URL
-  },
-  {
-    title: "The Power of Prayer",
-    date: "2024-02-18",
-    duration: "38:00",
-    audioUrl: "https://www.example.com/audio/the-power-of-prayer.mp3" // Replace with a valid URL
   }
 ];
 
@@ -48,11 +42,47 @@ const testimonials = [
     name: "Emily Davis",
     testimony: "Finding this community has been a true blessing for my family.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    name: "Emily Davis",
+    testimony: "Finding this community has been a true blessing for my family.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    name: "Emily Davis",
+    testimony: "Finding this community has been a true blessing for my family.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    name: "Emily Davis",
+    testimony: "Finding this community has been a true blessing for my family.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    name: "Emily Davis",
+    testimony: "Finding this community has been a true blessing for my family.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    name: "Emily Davis",
+    testimony: "Finding this community has been a true blessing for my family.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    name: "Emily Davis",
+    testimony: "Finding this community has been a true blessing for my family.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    name: "Emily Davis",
+    testimony: "Finding this community has been a true blessing for my family.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
   }
 ];
 
 export default function Blog() {
   const [currentAudio, setCurrentAudio] = useState<string | null>(null);
+  const testimonialsRef = useRef<HTMLDivElement>(null);
 
   const playAudio = (audioUrl: string) => {
     setCurrentAudio(audioUrl);
@@ -60,6 +90,18 @@ export default function Blog() {
 
   const closeAudio = () => {
     setCurrentAudio(null);
+  };
+
+  const scrollLeft = () => {
+    if (testimonialsRef.current) {
+      testimonialsRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (testimonialsRef.current) {
+      testimonialsRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -74,19 +116,19 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-4 dark:text-white ">
           <h2 className="text-3xl font-bold text-center mb-12 dark:text-white ">Our Leadership</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {pastors.map((pastor) => (
+            {pastors.map((pastor, index) => (
               <motion.div
                 key={pastor.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-lg shadow-lg overflow-hiddendark:text-white dark: text-gray-900"
+                className={`bg-white rounded-lg shadow-lg overflow-hidden dark:text-white ${index === 0 ? 'md:col-span-1' : 'md:col-span-1'}`}
               >
-                <div className="aspect-w-16 aspect-h-9">
+                <div className="border border-gray-200 shadow-md rounded-lg overflow-hidden">
                   <img
                     src={pastor.image}
                     alt={pastor.name}
-                    className="object-cover w-full h-64"
+                    className="object-fill w-full h-70"
                   />
                 </div>
                 <div className="p-6">
@@ -185,32 +227,49 @@ export default function Blog() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16">
+      <section className="py-16 relative">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Testimonials</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg shadow-lg p-6"
-              >
-                <div className="flex items-center mb-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
-                  <div>
+          <div className="relative">
+            <button
+              onClick={scrollLeft}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300"
+            >
+              <ChevronLeft className="h-6 w-6 text-gray-700" />
+            </button>
+            <div
+              ref={testimonialsRef}
+              className="flex overflow-x-auto space-x-4 scrollbar-hidden"
+            >
+              {testimonials.map((testimonial) => (
+                <motion.div
+                  key={testimonial.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-lg shadow-lg p-6 min-w-[300px]"
+                >
+                  <div className="border border-gray-200 shadow-md rounded-lg overflow-hidden">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="object-cover w-full h-40"
+                    />
+                  </div>
+                  <div className="p-6">
                     <h3 className="font-bold">{testimonial.name}</h3>
                     <p className="text-gray-600">Member</p>
+                    <p className="text-gray-600 italic mt-4">"{testimonial.testimony}"</p>
                   </div>
-                </div>
-                <p className="text-gray-600 italic">"{testimonial.testimony}"</p>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
+            <button
+              onClick={scrollRight}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow-md hover:bg-gray-300"
+            >
+              <ChevronRight className="h-6 w-6 text-gray-700" />
+            </button>
           </div>
         </div>
       </section>

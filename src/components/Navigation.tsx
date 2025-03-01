@@ -8,9 +8,10 @@ const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
   { name: 'Donate', href: '/donate' },
-  { name: 'Gallery', href: '/gallery' },
-  { name: 'Marketplace', href: '/marketplace' },
+  { name: 'Gallary', href: '/marketplace' },
+  { name: 'Market', href: '/gallery' },
   { name: 'Contact', href: '/contact' },
+  { name: 'Newsletters', href: '/donate' },
 ];
 
 export function Navigation() {
@@ -40,7 +41,7 @@ export function Navigation() {
             <Link
               key={item.name}
               to={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-100 dark:text-white dark:hover:text-gray-300"
+              className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-900 dark:text-white dark:hover:text-gray-300"
             >
               {item.name}
             </Link>

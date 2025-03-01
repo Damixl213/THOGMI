@@ -3,10 +3,10 @@ import { Facebook, Twitter, Instagram, Youtube, Cross } from 'lucide-react';
 import { SocialLink } from '../types';
 
 const socialLinks: SocialLink[] = [
-  { platform: 'Facebook', url: '#', icon: 'Facebook' },
-  { platform: 'Twitter', url: '#', icon: 'Twitter' },
-  { platform: 'Instagram', url: '#', icon: 'Instagram' },
-  { platform: 'YouTube', url: '#', icon: 'Youtube' },
+  { platform: 'Facebook', url: 'https://www.facebook.com/profile.php?id=100054206200432&mibextid=ZbWKwL', icon: 'Facebook' },
+  // { platform: 'Twitter', url: '#', icon: 'Twitter' },
+  // { platform: 'Instagram', url: '#', icon: 'Instagram' },
+  { platform: 'YouTube', url: 'https://www.youtube.com/@thehouseofgodministry', icon: 'Youtube' },
 ];
 
 const iconComponents = {
@@ -44,9 +44,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Service Times</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Sunday: 9:00 AM & 11:00 AM</li>
+              <li>Sunday: 7:00 AM & 11:00 AM</li>
               <li>Wednesday: 7:00 PM</li>
-              <li>Friday: 6:30 PM (Youth)</li>
+              <li>Tusday: 8:00 PM </li>
             </ul>
           </div>
 

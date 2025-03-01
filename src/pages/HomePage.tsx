@@ -77,8 +77,10 @@ export function HomePage() {
                     alt="Sunday Service"
                     className="h-80 w-full object-cover rounded-lg"
                   />
-                  <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">SUNDAY SERVICE</h3>
+                  <h3 className="mt-4 text-lg font-bold text-gray-900 dark:text-white">SUNDAY SERVICE</h3>
+                  <p className="mt-2 italic font-monospace text-black dark:text-white text-bold text-start">Every Sunday 8am we gather to enjoy and experience sound teachings and great atmosphere of God's presence.... </p>
                   <p className="mt-2 text-gray-600 dark:text-gray-300">10:00 AM - 12:00 PM</p>
+                  
                 </div>
                 <div className="rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
                   <img
@@ -86,8 +88,11 @@ export function HomePage() {
                     alt="Bible Study"
                     className="h-80 w-full object-fill rounded-lg"
                   />
-                  <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">BREAKTHROUGH SERVICE</h3>
+                  <h3 className="mt-4 text-lg font-bold text-gray-900 dark:text-white">BREAKTHROUGH SERVICE</h3>
+                  <p className="mt-2 italic font-monospace text-black dark:text-white text-bold text-start">On Tuesdays 8am we all gather for Prayers, Prophetic and Power. 
+<br /> <br />This Breakthrough Service is an atmosphere of raw Deliverance and Salvation</p>
                   <p className="mt-2 text-gray-600 dark:text-gray-300">Wednesday 7:00 PM - 8:30 PM</p>
+                  
                 </div>
                 <div className="rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
                   <img
@@ -95,8 +100,10 @@ export function HomePage() {
                     alt="Prayer Meeting"
                     className="h-80 w-full object-cover rounded-lg"
                   />
-                  <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">BIBLE STUDY</h3>
+                  <h3 className="mt-4 text-lg font-bold text-gray-900 dark:text-white">BIBLE STUDY</h3>
+                  <p className="mt-2 italic font-monospace text-black dark:text-white  text-start">7pm every Wednesday we come into God's presence to learn sound doctrines and application of scriptures to practical living.</p>
                   <p className="mt-2 text-gray-600 dark:text-gray-300">Friday 6:30 PM - 8:00 PM</p>
+                  
                 </div>
               </div>
             </motion.div>
